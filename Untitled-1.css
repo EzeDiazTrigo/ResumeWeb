@@ -218,7 +218,7 @@ footer {
     width: 8px;
     height: 8px;
     background-color: #000;
-    border: 2px solid #fff;
+    border: 2px solid #000000;
     border-radius: 50%;
   }
   
@@ -266,3 +266,6 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
+  .about_text {
+    color: #000;
+  }
