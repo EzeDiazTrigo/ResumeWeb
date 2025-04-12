@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  color: #333;
+  padding: 40px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 48px;
+  color: #4a4a4a;
+}
+
+.section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  min-width: 380px;
+  max-width: 700px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #444;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 8px 4px 4px 0;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #888;
+}
+
+/*CARRUCEL*/
+
+.carousel {
+  position: relative;
+  min-width: 200px;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carousel-track img {
+  width: 220px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 20px;
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.carousel-track img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+/*CARRUSEL 2*/
+.carousel2 {
+    position: relative;
+    min-width: 200px;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .carousel-track2 {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .carousel-track2 img {
+    width: 220px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 20px;
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  
+  .carousel-track2 img.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .prev2, .next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .prev2:hover, .next2:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .prev2 { left: 5px; }
+  .next2 { right: 5px; }
+  
+  /*EXPERIENCIA*/
+
+  .card {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    margin-bottom: 5px;
+    color: #4a4a4a;
+  }
+  
+  .card p {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  
+  /*INFORMACION*/
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card {
+  flex: 1 1 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+.card h3 {
+    margin-bottom: 10px;
+  }
+
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+  
+.section.about {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .about-card {
+    max-width: 1440px;
+    width: 100%;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
