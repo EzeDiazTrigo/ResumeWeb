@@ -29,8 +29,9 @@ header h1 {
 
 .section {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   margin-bottom: 60px;
+  margin: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -180,17 +181,11 @@ footer {
   
   /*EXPERIENCIA*/
 
-  .card {
-    background-color: #f0f0f0;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
+
   
   .card h3 {
-    margin-bottom: 5px;
-    color: #4a4a4a;
+    margin-bottom: 10px;
+    color: #000000;
   }
   
   .card p {
@@ -222,28 +217,6 @@ footer {
   }
   
   /*INFORMACION*/
-
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 20px;
-}
-
-.card {
-  flex: 1 1 300px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-  margin-bottom: 15px;
-}
-.card h3 {
-    margin-bottom: 10px;
-  }
 
 
 .card a:hover {
