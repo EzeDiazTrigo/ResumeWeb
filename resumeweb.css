@@ -67,6 +67,16 @@ header h1 {
   font-size: 14px;
 }
 
+.tag2 {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 8px 4px 4px 0;
+  font-size: 18px;
+}
+
 footer {
   text-align: center;
   margin-top: 60px;
@@ -143,7 +153,14 @@ footer {
     gap: 20px;
     padding: 20px;
   }
-  
+
+  .imagen {
+    width: 50px;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+  }
+
   .carousel-track2 img {
     width: 220px;
     flex-shrink: 0;
@@ -216,20 +233,36 @@ footer {
     border-radius: 50%;
   }
 
-  a:link {
+  .urlNormal:link {
     color: rgb(162, 204, 255)
   }
 
-  a:visited {
+  .urlNormal:visited {
     color: rgb(255, 146, 255); 
   }
   
-  a:hover {
+  .urlNormal:hover {
     color: rgb(255, 255, 255); 
   }
   
-  a:active {
+  .urlNormal:active {
     color: rgb(189, 189, 189);
+  }
+
+  .urlImage:link {
+    color: rgb(0, 0, 0)
+  }
+
+  .urlImage:visited {
+    color: rgb(0, 0, 0); 
+  }
+  
+  .urlImage:hover {
+    color: rgb(0, 0, 0); 
+  }
+  
+  .urlImage:active {
+    color: rgb(0, 0, 0);
   }
   
   /*INFORMACION*/
