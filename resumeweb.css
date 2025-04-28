@@ -38,7 +38,7 @@ header h1 {
 
 .card {
   flex: 1 1 45%;
-  background-color: #fff;
+  background-color: #656565;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -290,3 +290,136 @@ footer {
   .about_text {
     color: #ffffff;
   }
+
+/*CHANGE THEME*/
+
+body.light-mode {
+  background: #fff;
+  color: #000000;
+}
+
+.light-mode .sub_title {
+  color: #333333;
+}
+
+.light-mode header h1 {
+  color: #ed3f00;
+}
+
+.light-mode .card {
+  background-color: #b9b9b9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode .card h2 {
+  color: #ed3f00;
+}
+
+.light-mode .card h3,
+.light-mode .card p,
+.light-mode .card li {
+  color: #000000;
+}
+
+.light-mode .card li::before {
+  background-color: #626262;
+}
+
+.light-mode .tag,
+.light-mode .tag2 {
+  background-color: #fff89a;
+  color: #000;
+}
+
+.light-mode footer {
+  color: #7d7d7d;
+}
+
+/* Carrusel */
+.light-mode .prev, 
+.light-mode .next,
+.light-mode .prev2, 
+.light-mode .next2 {
+  background-color: rgb(255, 255, 255);
+  color: #ed3f00;
+}
+
+.light-mode .prev:hover, 
+.light-mode .next:hover,
+.light-mode .prev2:hover, 
+.light-mode .next2:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* About section */
+.light-mode .about-card {
+  box-shadow: 0 4px 12px rgba(255, 206, 47, 0.35);
+}
+
+.light-mode .about_text {
+  color: #333333;
+}
+
+/* Links */
+.light-mode .urlNormal:link {
+  color: rgb(0, 102, 204);
+}
+
+.light-mode .urlNormal:visited {
+  color: rgb(102, 0, 153);
+}
+
+.light-mode .urlNormal:hover {
+  color: rgb(255, 255, 255);
+}
+
+.light-mode .urlNormal:active {
+  color: rgb(85, 85, 85);
+}
+
+.light-mode .urlImage:link,
+.light-mode .urlImage:visited,
+.light-mode .urlImage:hover,
+.light-mode .urlImage:active {
+  color: rgb(255, 255, 255);
+}
+
+
+/*Change theme buttom*/
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #ffbb00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+body.light-mode .theme-toggle-btn {
+  background-color: #ffffff;
+  color: #fff;
+  box-shadow: 0 2px 6px rgb(255, 255, 255);
+}
+
+body.light-mode .theme-toggle-btn:hover {
+  background-color: #ed3f00;
+}
+

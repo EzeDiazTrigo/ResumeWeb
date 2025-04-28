@@ -73,3 +73,24 @@ function copiarTexto() {
     .then(() => alert("Texto copiado al portapapeles"))
     .catch(err => console.error("Error al copiar: ", err));
 }
+
+const button = document.getElementById('toggle-theme');
+
+button.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  if (document.body.classList.contains('light-mode')) {
+    button.textContent = '🌙';
+  } else {
+    button.textContent = '☀️';
+  }
+});
+
+
+// Opcional: cuando carga la página, que el botón muestre el texto correcto
+window.addEventListener('DOMContentLoaded', () => {
+  if (document.body.classList.contains('light-mode')) {
+    button.textContent = '🌙';
+  } else {
+    button.textContent = '☀️';
+  }
+});
