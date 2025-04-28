@@ -303,16 +303,16 @@ body.light-mode {
 }
 
 .light-mode header h1 {
-  color: #ed3f00;
+  color: #006eff;
 }
 
 .light-mode .card {
-  background-color: #b9b9b9;
+  background-color: #cdcdcd;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .light-mode .card h2 {
-  color: #ed3f00;
+  color: #006eff;
 }
 
 .light-mode .card h3,
@@ -327,7 +327,7 @@ body.light-mode {
 
 .light-mode .tag,
 .light-mode .tag2 {
-  background-color: #fff89a;
+  background-color: #ace9ff;
   color: #000;
 }
 
@@ -341,7 +341,7 @@ body.light-mode {
 .light-mode .prev2, 
 .light-mode .next2 {
   background-color: rgb(255, 255, 255);
-  color: #ed3f00;
+  color: #006eff;
 }
 
 .light-mode .prev:hover, 
@@ -420,6 +420,6 @@ body.light-mode .theme-toggle-btn {
 }
 
 body.light-mode .theme-toggle-btn:hover {
-  background-color: #ed3f00;
+  background-color: #006eff;
 }
 
