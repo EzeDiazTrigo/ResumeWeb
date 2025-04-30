@@ -29,10 +29,9 @@ header h1 {
 
 .section {
   display: flex;
-  gap: 20px;
-  margin-bottom: 60px;
-  margin: 20px;
   flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
   justify-content: center;
 }
 
@@ -84,8 +83,7 @@ footer {
   color: #888;
 }
 
-/*CARRUCEL*/
-
+/* --- Carrusel 1 --- */
 .carousel {
   position: relative;
   min-width: 200px;
@@ -116,85 +114,77 @@ footer {
   transform: scale(1);
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
 
+/* --- Carrusel 2 --- */
+.carousel2 {
+  position: relative;
+  min-width: 200px;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-track2 {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  padding: 20px;
+}
+
+.carousel-track2 img {
+  width: 220px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 20px;
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.carousel-track2 img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+  /* --- Botones de Carrusel (prev/next/prev2/next2) --- */
+.prev, .next, .prev2, .next2 {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   background-color: rgb(0, 0, 0);
   color: #FFD02F;
   border: none;
-  padding: 10px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 1;
 }
 
-.prev:hover, .next:hover {
+.prev, .next {
+  top: 50%;
+  transform: translateY(-123%);
+}
+
+.prev2, .next2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover, .prev2:hover, .next2:hover {
   background-color: rgba(0,0,0,0.5);
 }
 
-.prev { left: 5px; }
-.next { right: 5px; }
+.prev, .prev2 {
+  left: 5px;
+}
 
-/*CARRUSEL 2*/
-.carousel2 {
-    position: relative;
-    min-width: 200px;
-    max-width: 700px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-  
-  .carousel-track2 {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 20px;
-    padding: 20px;
-  }
+.next, .next2 {
+  right: 5px;
+}
 
-  .imagen {
-    width: 50px;
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-  }
-
-  .carousel-track2 img {
-    width: 220px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 20px;
-    opacity: 0.4;
-    transform: scale(0.9);
-  }
-  
-  .carousel-track2 img.active {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .prev2, .next2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgb(0, 0, 0);
-    color: #FFD02F;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  .prev2:hover, .next2:hover {
-    background-color: rgba(0,0,0,0.5);
-  }
-  
-  .prev2 { left: 5px; }
-  .next2 { right: 5px; }
   
   /*EXPERIENCIA*/
 
