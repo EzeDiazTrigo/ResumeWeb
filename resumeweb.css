@@ -114,6 +114,12 @@ footer {
   transform: scale(1);
 }
 
+.imagen {
+  margin-top: 7px;
+  margin-right: 2px;
+  margin-left: 2px;
+  max-width: 50px;
+}
 
 /* --- Carrusel 2 --- */
 .carousel2 {
