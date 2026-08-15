@@ -1,71 +1,84 @@
-// Carrusel 1
-const track1 = document.querySelector('.carousel-track');
-const slides1 = Array.from(track1.children);
-const nextButton1 = document.querySelector('.next');
-const prevButton1 = document.querySelector('.prev');
-let currentSlideIndex1 = 0;
+// Carrusel 1 y 3 (mismo HTML reutilizado con .carousel)
+document.querySelectorAll('.carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  if (!track) return;
 
-function updateCarousel1() {
-  slides1.forEach((slide, index) => {
-    slide.classList.remove('active');
-    slide.style.opacity = index === currentSlideIndex1 ? 1 : 0.4;
-    slide.style.transform = index === currentSlideIndex1 ? 'scale(1)' : 'scale(0.9)';
+  const slides = Array.from(track.children);
+  if (!slides.length) return;
+
+  const nextButton = carousel.querySelector('.next');
+  const prevButton = carousel.querySelector('.prev');
+  let currentSlideIndex = 0;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      const isActive = index === currentSlideIndex;
+      slide.classList.toggle('active', isActive);
+      slide.style.opacity = isActive ? 1 : 0.4;
+      slide.style.transform = isActive ? 'scale(1)' : 'scale(0.9)';
+    });
+
+    const slideWidth = slides[0].getBoundingClientRect().width + 20;
+    track.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
+  }
+
+  nextButton?.addEventListener('click', () => {
+    if (currentSlideIndex < slides.length - 1) {
+      currentSlideIndex++;
+      updateCarousel();
+    }
   });
 
-  const slideWidth = slides1[0].getBoundingClientRect().width + 20;
-  track1.style.transform = `translateX(-${currentSlideIndex1 * slideWidth}px)`;
-}
+  prevButton?.addEventListener('click', () => {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      updateCarousel();
+    }
+  });
 
-nextButton1.addEventListener('click', () => {
-  if (currentSlideIndex1 < slides1.length - 1) {
-    currentSlideIndex1++;
-    updateCarousel1();
-  }
+  updateCarousel();
 });
-
-prevButton1.addEventListener('click', () => {
-  if (currentSlideIndex1 > 0) {
-    currentSlideIndex1--;
-    updateCarousel1();
-  }
-});
-
-updateCarousel1();
-
 
 // Carrusel 2
-const track2 = document.querySelector('.carousel-track2');
-const slides2 = Array.from(track2.children);
-const nextButton2 = document.querySelector('.next2');
-const prevButton2 = document.querySelector('.prev2');
-let currentSlideIndex2 = 0;
+document.querySelectorAll('.carousel2').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track2');
+  if (!track) return;
 
-function updateCarousel2() {
-  slides2.forEach((slide, index) => {
-    slide.classList.remove('active');
-    slide.style.opacity = index === currentSlideIndex2 ? 1 : 0.4;
-    slide.style.transform = index === currentSlideIndex2 ? 'scale(1)' : 'scale(0.9)';
+  const slides = Array.from(track.children);
+  if (!slides.length) return;
+
+  const nextButton = carousel.querySelector('.next2');
+  const prevButton = carousel.querySelector('.prev2');
+  let currentSlideIndex = 0;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      const isActive = index === currentSlideIndex;
+      slide.classList.toggle('active', isActive);
+      slide.style.opacity = isActive ? 1 : 0.4;
+      slide.style.transform = isActive ? 'scale(1)' : 'scale(0.9)';
+    });
+
+    const slideWidth = slides[0].getBoundingClientRect().width + 20;
+    track.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
+  }
+
+  nextButton?.addEventListener('click', () => {
+    if (currentSlideIndex < slides.length - 1) {
+      currentSlideIndex++;
+      updateCarousel();
+    }
   });
 
-  const slideWidth = slides2[0].getBoundingClientRect().width + 20;
-  track2.style.transform = `translateX(-${currentSlideIndex2 * slideWidth}px)`;
-}
+  prevButton?.addEventListener('click', () => {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      updateCarousel();
+    }
+  });
 
-nextButton2.addEventListener('click', () => {
-  if (currentSlideIndex2 < slides2.length - 1) {
-    currentSlideIndex2++;
-    updateCarousel2();
-  }
+  updateCarousel();
 });
-
-prevButton2.addEventListener('click', () => {
-  if (currentSlideIndex2 > 0) {
-    currentSlideIndex2--;
-    updateCarousel2();
-  }
-});
-
-updateCarousel2();
 
 function copiarTexto() {
   const texto = "ezequiel.dt.01@gmail.com";
